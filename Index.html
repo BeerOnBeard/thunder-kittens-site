@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Thunder Kittens</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo|Roboto" rel="stylesheet">
+    <style>
+      body {
+        padding: 0.2em;
+        font-family: 'Roboto', sans-serif;
+      }
+      h1, h2, h3 {
+        font-family: 'Heebo', sans-serif;
+      }
+      .header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 1em;
+      }
+      .header__logo {
+        order: 1;
+        
+        /* to even out each side and center header title */
+        margin-right: 77px;
+      }
+      .header__title {
+        font-size: 4em;
+        margin: 0;
+        order: 2;
+        text-align: center;
+      }
+      .header__social {
+        display: flex;
+        order: 3;
+      }
+      
+      @media all and (max-width: 650px) {
+        .header {
+          justify-content: space-around;
+        }
+        .header__logo {
+          margin: 0;
+        }
+        .header__title {
+          order: 0;
+          flex-basis: 100%;
+        }
+      }
+    </style>
+    <style>
+      .subtitle {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      .banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .banner img {
+        max-width: 100%;
+        object-fit: contain;
+      }
+      .shows {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .shows__show {
+        margin: 1em;
+        width: 18em;
+      }
+      .videos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .videos > * {
+        margin: 1em;
+      }
+    </style>
+    <style>
+      .logo-tk, .logo-fb, .logo-yt {
+        background-image: url('IconSet.png');
+        background-repeat: no-repeat;
+        height: 77px;
+        width: 77px;
+      }
+      .logo-tk {
+        background-position: -154px 0;
+      }
+      .logo-fb {
+        background-position: -77px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__logo logo-tk"></div>
+      <h1 class="header__title">Thunder Kittens</h1>
+      <div class="header__social">
+        <a href="https://www.youtube.com/channel/UCopvFFozNk6dZixoV460tfg/videos" target="_blank"><div class="logo-yt"></div></a>
+        <a href="https://www.facebook.com/thunderkittensband" target="_blank"><div class="logo-fb"></div></a>
+      </div>
+    </div>
+    
+    <div class="subtitle">
+      <div>Providing Vermont with the freshest Groove Rock since 2013</div>
+      <a href="#shows">Shows!</a>
+      <a href="#videos">Videos!</a>
+    </div>
+    
+    <div class="banner">
+      <img src="FullBand.jpg" alt="Image of the band" />
+    </div>
+    
+    <h2 id="shows">Upcoming Shows</h2>
+    <span>Book us for your next event! Email us at thunderkittensmusic@gmail.com.</span>
+    
+    <div class="shows">
+      <div class="shows__show">
+        <h3>Northern Exposure</h3>
+        <div>
+          Thunder Kittens, Reid, The Paisley Vibe<br />
+          June 24, 2017 Doors: 8pm<br />
+          Higher Ground Showcase Lounge<br />
+          1214 Williston Rd., South Burlington, VT<br />
+          Call for tickets 802-782-0006
+        </div>
+      </div>
+      <div class="shows__show">
+        <h3>Switchback Tap Room Birthday</h3>
+        <div>
+          June 25, 2017 1PM to 4PM<br />
+          Switchback Tap Room<br />
+          160 Flynn Ave., Burlington, VT<br />
+          <a href="https://switchbackvt.com">switchbackvt.com</a>
+        </div>
+      </div>
+      <div class="shows__show">
+        <h3>Switchback Tap Room</h3>
+        <div>
+          July 21 2017 6PM to 8PM<br />
+          Switchback Tap Room<br />
+          160 Flynn Ave., Burlington, VT<br />
+          <a href="https://switchbackvt.com">switchbackvt.com</a>
+        </div>
+      </div>
+      <div class="shows__show">
+        <h3>Winooski Farmers Market</h3>
+        <div>
+          August 20, 2017 10:30AM to 2PM<br />
+          Winooski Falls Way, Winooski, VT<br />
+          <a href="https://fb.com/winooskifarmersmarket">fb.com/winooskifarmersmarket</a>
+        </div>
+      </div>
+      <div class="shows__show">
+        <h3>Winooski Farmers Market</h3>
+        <div>
+          September 10, 2017 10:30AM to 2PM<br />
+          Winooski Falls Way, Winooski, VT<br />
+          <a href="https://fb.com/winooskifarmersmarket">fb.com/winooskifarmersmarket</a>
+        </div>
+      </div>
+    </div>
+    
+    <h2 id="videos">Videos</h2>
+    <div class="videos">
+      <iframe src="https://www.youtube.com/embed/lkZNEX6O9gY" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/KoxH-Ilqm5k" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </body>
+</html>
