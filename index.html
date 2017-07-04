@@ -61,6 +61,8 @@
       body {
         padding: 0.2em;
         font-family: 'Roboto', sans-serif;
+        background: black;
+        color: white;
       }
       h1, h2, h3 {
         font-family: 'Heebo', sans-serif;
@@ -75,6 +77,7 @@
       }
       .logo-tk {
         background-position: -154px 0;
+        cursor: pointer;
       }
       .logo-fb {
         background-position: -77px 0;
@@ -90,8 +93,8 @@
       .header__logo {
         order: 1;
         
-        /* To even out each side and center header title. Width of icon. */
-        margin-right: 77px;
+        /* To even out each side and center header title. Width of icon + margin offset from logo-fb. */
+        margin-right: 80px;
       }
       .header__title {
         font-size: 4em;
@@ -102,6 +105,9 @@
       .header__social {
         display: flex;
         order: 3;
+      }
+      .logo-fb {
+        margin-left: 3px;
       }
       .header__social > .logo-tk {
         display: none;
@@ -154,6 +160,9 @@
         .header__social > .logo-tk {
           display: block;
         }
+        .logo-fb {
+          margin: 0;
+        }
         .header__title {
           order: 0;
           flex-basis: 100%;
@@ -166,7 +175,9 @@
         }
         
         .logo-tk, .logo-fb, .logo-yt {
-          zoom: 0.7;
+          /* Very specific, I know. It helps keep the pixels in the bounding area.
+             Change it and there might be a pixel on the right side that peeks out. */
+          zoom: 0.81;
         }
       }
     </style>
@@ -189,7 +200,7 @@
     </div>
     
     <div class="banner">
-      <img id="bannerImage" src="FullBand.jpg" alt="Image of the band" />
+      <img id="bannerImage" src="FullBand.png" alt="Image of the band" />
     </div>
     
     <h2 id="shows">Upcoming Shows</h2>
