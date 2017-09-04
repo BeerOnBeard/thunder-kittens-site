@@ -173,13 +173,12 @@
       
       @media all and (max-width: 500px) {
         .header__title {
-          font-size: 2.5em;
+          /* Fits title without wrapping on 320px screens */
+          font-size: 2.1em;
         }
         
         .logo-tk, .logo-fb, .logo-yt {
-          /* Very specific, I know. It helps keep the pixels in the bounding area.
-             Change it and there might be a pixel on the right side that peeks out. */
-          zoom: 0.81;
+          zoom: 0.6;
         }
       }
     </style>
@@ -187,7 +186,7 @@
   <body>
     <div class="header">
       <div class="header__logo logo-tk"></div>
-      <h1 class="header__title">Thunder Kittens</h1>
+      <h1 class="header__title">THUNDER KITTENS</h1>
       <div class="header__social">
         <div class="logo-tk"></div>
         <a class="logo-yt" href="https://www.youtube.com/channel/UCopvFFozNk6dZixoV460tfg/videos" target="_blank"></a>
