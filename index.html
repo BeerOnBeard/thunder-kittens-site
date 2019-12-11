@@ -23,12 +23,10 @@ html, body {
 
 .main--hidden {
   display: none;
-  position: absolute;
-  top: -99999px;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #f0ad06;
   text-align: center;
   margin-top: -2rem;
@@ -54,15 +52,12 @@ h2 {
 }
 
 .videos {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .videos > iframe {
-  margin: 2rem;
+  padding: 0;
+  padding-bottom: 2rem;
 }
 
 .shows {
@@ -96,37 +91,26 @@ h2 {
   color: #f0ad06;
 }
 
-.contact {
-  width: 100%;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.contact > div {
-  margin: 1rem;
-}
-
 .footer {
+  text-align: center;
   padding: 2rem 0;
 }
 
 .footer > div {
   margin: 1rem;
+  font-size: 1rem;
 }
 
 /* Loading Panel */
 .loading-panel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('loading-background.jpg');
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .loading-panel--out {
@@ -135,7 +119,7 @@ h2 {
 }
 
 .loading-panel__cat {
-  width: 20%;
+  height: 60%;
   animation: 2s linear infinite spin;
   -webkit-animation: 2s linear infinite spin;
   transform-origin: 50% 75%;
@@ -177,36 +161,41 @@ h2 {
   }
 }
 
-@media all and (max-width: 359px) {
-  h1 {
-    font-size: 3rem;
-  }
+@media all and (min-width: 365px) {
+  h1 { font-size: 4rem; }
+  h2 { font-size: 2rem; }
+  div { font-size: 1.25rem; }
+  .videos > iframe { padding: 2rem; }
+}
 
-  .videos > iframe {
-    margin: 0;
-    margin-bottom: 2rem;
-  }
+@media all and (min-width: 768px) {
+  h1 { font-size: 5rem;}
+  h2 { font-size: 3rem; }
+  div { font-size: 2rem; }
 }
     </style>
   </head>
   <body>
     <div id="loading-panel" class="loading-panel">
-      <img id="cat" src="horny-cat.png" class="loading-panel__cat"/>
+      <img id="cat" src="horny-cat.png" alt="Cat with a unicorn horn" class="loading-panel__cat"/>
     </div>
     <div id="main" class="main main--hidden">
       <div class="banner">
-        <img src="FullBand.png" />
+        <img src="FullBand.png" alt="Photo of the band with lightning bolts around them" />
         <h1>THUNDER KITTENS</h1>
       </div>
 
-      <div class="contact">
-        <div>
-          Want Thunder Kittens to play at your venue?<br/>
-          Email us @ <a href="mailto:thunderkittensband@gmail.com">thunderkittensband@gmail.com</a>
-        </div>
-        <div>
-          <a href="https://www.facebook.com/thunderkittensband">Check us out on Facebook</a>
-        </div>
+      <h2>Videos</h2>
+      <div class="videos">
+        <iframe src="https://www.youtube.com/embed/GLHv8hAlzOI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/UmYC1MaKjFU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/2vnqwD6WF4g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/4lDn3XRSfNg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/LahM_YSR4R8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/xE6YrsrDKmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/_QjBLuoj7WE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/9WrGyc5DBvE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/BiCLbAFtHN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
       <div class="shows">
@@ -308,7 +297,15 @@ h2 {
           <div class="show__town">Winooski, VT</div>
         </div>
       </div>
+
       <div class="footer">
+        <div>
+          Want Thunder Kittens to play at your venue?<br/>
+          Email us @ <a href="mailto:thunderkittensband@gmail.com">thunderkittensband@gmail.com</a>
+        </div>
+        <div>
+          <a href="https://www.facebook.com/thunderkittensband">Check us out on Facebook</a>
+        </div>
         <div>
           Site by <a href="https://assortedsolutions.com">Assorted Solutions</a>
         </div>
@@ -317,6 +314,7 @@ h2 {
         </div>
       </div>
     </div>
+
     <script>
       setTimeout(function() {
         var cat = document.getElementById('cat');
