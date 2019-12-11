@@ -182,18 +182,16 @@ h1 {
 }
     </style>
     <script>
-      window.addEventListener('load', function(e) {
+      setTimeout(function() {
+        var cat = document.getElementById('cat');
+        cat.classList.add('loading-panel__cat--out');
+        var loadingPanel = document.getElementById('loading-panel');
+        loadingPanel.classList.add('loading-panel--out');
         setTimeout(function() {
-          let cat = document.getElementById('cat');
-          cat.classList.add('loading-panel__cat--out');
-          let loadingPanel = document.getElementById('loading-panel');
-          loadingPanel.classList.add('loading-panel--out');
-          setTimeout(function() {
-            loadingPanel.parentNode.removeChild(loadingPanel);
-            document.getElementById('main').classList.remove('main--hidden');
-          }, 900);
-        }, 4000);
-      });
+          loadingPanel.parentNode.removeChild(loadingPanel);
+          document.getElementById('main').classList.remove('main--hidden');
+        }, 900);
+      }, 4000);
     </script>
   </head>
   <body>
