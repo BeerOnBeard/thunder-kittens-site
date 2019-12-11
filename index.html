@@ -14,11 +14,6 @@ html, body {
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-}
-
 .main {
   width: 100%;
   display: flex;
@@ -39,6 +34,11 @@ h1 {
   margin-top: -2rem;
 }
 
+h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+
 .banner {
   width: 100%;
   background-color: #000000;
@@ -51,7 +51,6 @@ h1 {
 .banner > img {
   width: 100%;
   max-width: 940px;
-  height: auto;
 }
 
 .videos {
@@ -68,10 +67,6 @@ h1 {
 
 .shows {
   width: 100%;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: stretch;
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: #000000;
@@ -80,18 +75,19 @@ h1 {
 
 .show {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 1rem;
+  margin: auto;
+  text-align: center;
 }
 
 .show > div {
+  vertical-align: middle;
+  display: inline-block;
+  width: 30%;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
 .show__date {
-  padding-left: 0.5rem;
   font-weight: 800;
 }
 
@@ -102,11 +98,19 @@ h1 {
 
 .contact {
   width: 100%;
-  margin: 2rem 0;
+  padding: 2rem 0;
   text-align: center;
 }
 
 .contact > div {
+  margin: 1rem;
+}
+
+.footer {
+  padding: 2rem 0;
+}
+
+.footer > div {
   margin: 1rem;
 }
 
@@ -193,6 +197,16 @@ h1 {
       <div class="banner">
         <img src="FullBand.png" />
         <h1>THUNDER KITTENS</h1>
+      </div>
+
+      <div class="contact">
+        <div>
+          Want Thunder Kittens to play at your venue?<br/>
+          Email us @ <a href="mailto:thunderkittensband@gmail.com">thunderkittensband@gmail.com</a>
+        </div>
+        <div>
+          <a href="https://www.facebook.com/thunderkittensband">Check us out on Facebook</a>
+        </div>
       </div>
 
       <div class="shows">
@@ -294,14 +308,7 @@ h1 {
           <div class="show__town">Winooski, VT</div>
         </div>
       </div>
-      <div id="contact" class="contact">
-        <div>
-          Want Thunder Kittens to play at your venue?<br/>
-          Email us @ <a href="mailto:thunderkittensband@gmail.com">thunderkittensband@gmail.com</a>
-        </div>
-        <div>
-          <a href="https://www.facebook.com/thunderkittensband">Check us out on Facebook</a>
-        </div>
+      <div class="footer">
         <div>
           Site by <a href="https://assortedsolutions.com">Assorted Solutions</a>
         </div>
