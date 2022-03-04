@@ -23,30 +23,6 @@ body {
 }
 
 
-h1 {
-  font-style: normal;
-  font-weight: bold;
-  color: #f0ad06;
-  letter-spacing: 0.03em;
-  line-height: 1;
-  font-size: 2rem;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
-  margin-bottom: 40px;
-}
-
-@media(min-width: 767px) {
-  h1 {
-    font-size: 4rem;
-  }
-  
-}
-
-@media(min-width: 1023px) {
-  h1 {
-    font-size: 5rem;
-  }
-}
-
 .loading {
   overflow-y: hidden;
 }
@@ -165,15 +141,38 @@ h1 {
           "
         />
 
-        <h1
-          style="
+        <style>
+          h1 {
+            font-style: normal;
+            font-weight: bold;
+            color: #f0ad06;
+            letter-spacing: 0.03em;
+            line-height: 1;
+            font-size: 2rem;
+            text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+            margin-bottom: 40px;
             position: absolute;
             bottom: 0;
             width: 100%;
             text-align: center;
             filter: drop-shadow(0 0 5px black);
-          "
-        >
+          }
+
+          @media(min-width: 767px) {
+            h1 {
+              font-size: 4rem;
+            }
+            
+          }
+
+          @media(min-width: 1023px) {
+            h1 {
+              font-size: 5rem;
+            }
+          }
+        </style>
+
+        <h1>
           Thunder Kittens
         </h1>
       </div>
